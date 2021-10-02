@@ -1,0 +1,75 @@
+.todayDetailHighlight-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+    .todayDetailHighlight-wrapper__icon {
+        width: 80px;
+        height: 80px;
+        background-size: contain;
+        cursor: pointer;
+    }
+    .todayDetailHighlight-wrapper__info {
+        margin-left: 30px;
+        font-size: 20px;
+        .highlight-text {
+            font-size: 30px;
+            color: #ffffff;
+        }
+        .highlight-info {
+            .highlight-temperature:before {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background-size: contain;
+                background-image: url("../../assets/temperature.svg");
+                content: "";
+                color: #ffffff;
+            }
+            .highlight-humidity::before {
+                margin-left: 40px;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background-size: contain;
+                background-image: url("../../assets/humidity.svg");
+                content: "";
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 694px) {
+    .todayDetailHighlight-wrapper {
+        margin-top: 1em;
+    }
+}
+
+@media screen and (max-height: 596px) {
+    .todayDetailHighlight-wrapper {
+        height: 40%;
+        margin-top: 1em;
+        .todayDetailHighlight-wrapper__info {
+            margin-left: 20px;
+            font-size: 25px;
+            .highlight-text {
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+@media screen and (max-height: 496px) {
+    .todayDetailHighlight-wrapper {
+        height: 40%;
+        margin-top: 0em;
+        .todayDetailHighlight-wrapper__info {
+            margin-left: 20px;
+            font-size: 15px;
+            .highlight-text {
+                font-size: 15px;
+            }
+        }
+    }
+}
